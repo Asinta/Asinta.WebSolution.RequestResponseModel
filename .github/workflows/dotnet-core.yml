@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore -p src/
     - name: Build
       run: dotnet build -p src/Asinta.WebSolution.RequestResponseModel/Asinta.WebSolution.RequestResponseModel.csproj --configuration Release --no-restore
     - name: Test
